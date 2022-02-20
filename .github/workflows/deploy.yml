@@ -30,19 +30,15 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/html/web/app/themes/arcanjo.dev/
-#            composer install
-#            yarn install
-#            yarn build:production
-
 #          cd /var/www/html/web/app/themes
 #          chmod -R 777 arcanjo.dev-wordpress
 #          cd /var/www/html/web/app/themes/arcanjo.dev-wordpress
-#          composer install
-#          yarn build
-#          cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
-#          mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
-#          mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
-#          mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            composer install
+            yarn build
+            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
+            mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
 #          cd /var/www/html/
 #          find . -type d -exec chmod 755 {} \;
 #          find . -type f -exec chmod 644 {} \;

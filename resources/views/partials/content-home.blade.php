@@ -205,7 +205,7 @@
 {{-- container end --}}
 
 {{-- container --}}
-<div class="container-fluid">
+<div class="container-fluid d-none">
 
     {{-- row --}}
     <div class="row p-0-0">

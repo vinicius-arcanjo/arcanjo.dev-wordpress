@@ -25,13 +25,12 @@
             </div>
             <p class="fs-14 text-white">Sou Engenheiro de Software e atualmente trabalho na
               <a href="https://www.linkedin.com/company/r2comvc/" class="ark-link-header">R2 com.vc</a><br>
-              Trabalho principalmente com desenvolvimento full stack e sou um geek de NextJs e CSS.<br>
-              Compartilho ideias e o que aprendo no meu <a href="/blog" class="ark-link-header">Blog</a>,
-              e estou criando meu primeiro <a href="#" class="ark-link-header">Curso</a> de programação.
+              Trabalho principalmente com desenvolvimento Full Stack e sou um geek de NextJs e CSS.<br>
+              Compartilho ideias e o que aprendo no meu <a href="/blog" class="ark-link-header">Blog</a>.
             </p>
             <div class="ark-buttons-frame">
               {{-- button --}}
-              <a href="/projetos" class="ark-btn ark-btn-md"><span>Explore Agora</span></a>
+              <a href="/blog" class="ark-btn ark-btn-md"><span>Explore Agora</span></a>
             </div>
           </div>
           {{-- main title end --}}
@@ -217,7 +216,7 @@
         {{-- title frame --}}
         <div class="ark-title-frame">
           {{-- title --}}
-          <h4>Outros Servicos</h4>
+          <h4>Outros Serviços</h4>
         </div>
         {{-- title frame end --}}
       </div>

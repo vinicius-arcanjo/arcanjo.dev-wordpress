@@ -12,7 +12,7 @@
                 {{-- counter --}}
                 <div class="ark-counter-box">
                     {{-- counter number --}}
-                    <span class="ark-counter">10</span><span class="ark-counter-plus">+</span>
+                    <span class="ark-counter">7</span><span class="ark-counter-plus">+</span>
                 </div>
                 {{-- counter end --}}
                 {{-- title --}}
@@ -31,7 +31,7 @@
                 {{-- counter --}}
                 <div class="ark-counter-box">
                     {{-- counter number --}}
-                    <span class="ark-counter">53</span>
+                    <span class="ark-counter">53</span><span class="ark-counter-plus">+</span>
                 </div>
                 {{-- counter end --}}
                 {{-- title --}}

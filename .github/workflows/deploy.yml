@@ -30,7 +30,7 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/html/web/app/themes/arcanjo.dev/
-            composer install
+            composer install --ignore-platform-reqs
             yarn build
             cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
             mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist

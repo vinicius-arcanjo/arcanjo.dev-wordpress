@@ -1,0 +1,205 @@
+.ark-bg {
+  @include themed() {
+    background-image: t($bg);
+  }
+}
+
+.ark-link-header {
+  @include themed() {
+    color: t($main-color);
+    text-decoration: underline;
+  }
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ark-dark-mode {
+  position: absolute;
+  bottom: 200px;
+  left: -42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+  transform: rotate(90deg);
+
+  div {
+    align-items: center;
+    display: inline-flex;
+
+    .ark-mode {
+      @include themed() {
+        color: t($text-color-2);
+      }
+
+      &:before {
+        position: absolute;
+        left: -35px;
+        @include themed() {
+          content: t($content);
+          color: t($text-color-2);
+        }
+      }
+    }
+
+    .ark-line {
+      width: 24px;
+      height: 1px;
+      display: inline-block;
+      @include themed() {
+        background-color: t($text-color-2);
+      }
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 920px) {
+      display: none;
+    }
+  }
+
+  label {
+    position: relative;
+    display: block;
+    width: 85px;
+    height: 50px;
+    border-radius: 100px;
+    @include themed() {
+      background-color: t($toggle-color);
+    }
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: inset $shadow-1;
+
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      top: 10px;
+      left: 10px;
+      transition: all 0.5s ease, background 0s;
+    }
+    &:before {
+      @include themed() {
+        background-color: t($main-color);
+      }
+    }
+
+    &:after {
+      @include themed() {
+        background-color: t($toggle-color);
+      }
+      left: -58px;
+      transform: scale(0.00001);
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    &:checked + label {
+      &:before {
+        background-color: #fff;
+        transform: translateX(35px);
+      }
+
+      &:after {
+        transform: translateX(90px) translateY(5px) scale(1);
+      }
+    }
+  }
+
+  @media (max-width: 920px) {
+    bottom: 165px;
+    left: -2px;
+  }
+}
+
+.quform-label-text {
+  display: none !important;
+}
+
+.ark-title-tech {
+  border-left-width: 7px;
+  border-left-style: solid;
+  @include themed() {
+    border-left-color: t($main-color);
+  }
+  padding-left: 10px;
+}
+
+.ark-img-tech {
+  img {
+    height: 128px;
+    width: 128px;
+    border-radius: 10px;
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 18px;
+    @include themed() {
+      color: t($text-color-1);
+    }
+  }
+}
+
+.ark-price-body {
+  h5 {
+    span {
+      text-decoration: line-through;
+    }
+  }
+}
+
+.ark-concepts {
+  column-count: 3 !important;
+
+  li {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 786px) {
+    column-count: 2 !important;
+  }
+
+  @media (max-width: 500px) {
+    column-count: 1 !important;
+  }
+}
+
+.ark-subline {
+  strong {
+    @include themed() {
+      border-bottom-color: t($main-color);
+    }
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+}
+
+.ark-course-overlay {
+  background-image: linear-gradient(
+    90deg,
+    rgba(45, 45, 58, 0.9) 15%,
+    rgba(45, 45, 58, 0.7) 50%,
+    rgba(43, 43, 53, 0.7) 100%
+  ) !important;
+}
+
+.theme--light {
+  .ark-banner {
+    .ark-course-overlay-white {
+      background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.9) 15%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0.9) 100%
+      );
+    }
+  }
+}

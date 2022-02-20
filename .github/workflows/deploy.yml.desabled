@@ -1,0 +1,47 @@
+name: Deploy
+
+on: [ push ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Copy repository contents via scp
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "."
+          target: "/var/www/html/"
+      #        target: "/var/www/html/web/app/themes/arcanjo.dev-wordpress"
+
+      - name: Executing remote command
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/html/
+#            composer install
+
+#          cd /var/www/html/web/app/themes
+#          chmod -R 777 arcanjo.dev-wordpress
+#          cd /var/www/html/web/app/themes/arcanjo.dev-wordpress
+#          composer install
+#          yarn build
+#          cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
+#          mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+#          mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+#          mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+#          cd /var/www/html/
+#          find . -type d -exec chmod 755 {} \;
+#          find . -type f -exec chmod 644 {} \;

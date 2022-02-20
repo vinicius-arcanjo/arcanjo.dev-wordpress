@@ -1,0 +1,102 @@
+$main-color: "main-color";
+$card-color: "card-color";
+$card-color-light: "card-color-light";
+$card-color-s-light: "card-color-s-light";
+$info-bar-1-color: "info-bar-1-color";
+$info-bar-1-color-light: "info-bar-1-color-light";
+$info-bar-1-color-s-light: "info-bar-1-color-s-light";
+$info-bar-2-color: "info-bar-2-color";
+$info-bar-2-color-light: "info-bar-2-color-light";
+$info-bar-2-color-s-light: "info-bar-2-color-s-light";
+$content-color: "content-color";
+$content-color-light: "content-color-light";
+$content-color-s-light: "content-color-s-light";
+$deep-color: "deep-color";
+$deep-color-light: "deep-color-light";
+$deep-color-s-light: "deep-color-s-light";
+$text-color-1: "text-color-1";
+$text-color-2: "text-color-2";
+$text-color-3: "text-color-3";
+$top-bg-gradient: "top-bg-gradient";
+$top-bg-gradient-1: "top-bg-gradient-1";
+$toggle-color: "toggle-color";
+$bg: "bg";
+$content: "content";
+
+$themes: (
+  dark: (
+    main-color: $main--dark--color,
+    card-color: $card--color--dark,
+    card-color-light: $card--color--light--dark,
+    card-color-s-light: $card--color--s--light--dark,
+    info-bar-1-color: $info--bar--1--color--dark,
+    info-bar-1-color-light: $info--bar--1--color--light--dark,
+    info-bar-1-color-s-light: $info--bar--1--color--s--light--dark,
+    info-bar-2-color: $info--bar--2--color--dark,
+    info-bar-2-color-light: $info--bar--2--color--light--dark,
+    info-bar-2-color-s-light: $info--bar--2--color--s--light--dark,
+    content-color: $content--color--dark,
+    content-color-light: $content--color--light--dark,
+    content-color-s-light: $content--color--s--light--dark,
+    deep-color: $deep--color--dark,
+    deep-color-light: $deep--color--light--dark,
+    deep-color-s-light: $deep--color--s-light--dark,
+    text-color-1: $text--color--1--dark,
+    text-color-2: $text--color--2--dark,
+    text-color-3: $text--color--3--dark,
+    top-bg-gradient: $top--bg--gradient--dark,
+    top-bg-gradient-1: $top--bg--gradient--1--dark,
+    toggle-color: $toggle--color--dark,
+    bg: $bg--dark,
+    content: $content--dark,
+  ),
+  light: (
+    main-color: $main--light--color,
+    card-color: $card--color--light,
+    card-color-light: $card--color--light--light,
+    card-color-s-light: $card--color--s--light--light,
+    info-bar-1-color: $info--bar--1--color--light,
+    info-bar-1-color-light: $info--bar--1--color--light--light,
+    info-bar-1-color-s-light: $info--bar--1--color--s--light--light,
+    info-bar-2-color: $info--bar--2--color--light,
+    info-bar-2-color-light: $info--bar--2--color--light--light,
+    info-bar-2-color-s-light: $info--bar--2--color--s--light--light,
+    content-color: $content--color--light,
+    content-color-light: $content--color--light--light,
+    content-color-s-light: $content--color--s--light--light,
+    deep-color: $deep--color--light,
+    deep-color-light: $deep--color--light--light,
+    deep-color-s-light: $deep--color--s-light--light,
+    text-color-1: $text--color--1--light,
+    text-color-2: $text--color--2--light,
+    text-color-3: $text--color--3--light,
+    top-bg-gradient: $top--bg--gradient--light,
+    top-bg-gradient-1: $top--bg--gradient--1--light,
+    toggle-color: $toggle--color--light,
+    bg: $bg--light,
+    content: $content--light,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

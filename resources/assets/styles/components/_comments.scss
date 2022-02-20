@@ -1,0 +1,125 @@
+.ark-comment-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  & > .comment {
+    margin-bottom: 30px;
+    padding: 30px;
+    box-shadow: $shadow-1;
+    transition: $tr-lg;
+
+    @include themed() {
+      background: t($card-color);
+    }
+
+    .ark-comment-body {
+      .ark-comment-image {
+        float: left;
+        width: 80px;
+        height: 80px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+        }
+      }
+
+      .ark-comment {
+        margin-left: 100px;
+        position: relative;
+
+        .ark-comment-name {
+          padding: 0;
+          margin: 0 0 15px;
+          font-size: 14px;
+          font-weight: 600;
+
+          @include themed() {
+            color: t($text-color-2);
+          }
+        }
+
+        .ark-comment-text {
+          display: flex;
+          flex-direction: column;
+
+          .ark-comment-single-text {
+            margin-bottom: 0;
+          }
+        }
+
+        .ark-comment-info {
+          padding: 15px 0 0;
+        }
+
+        .ark-comment-reply {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          .comment-reply-link {
+            &::after {
+              margin-left: 8px;
+              content: "\f112";
+              display: inline-block;
+              vertical-align: middle;
+              font-family: "FontAwesome";
+              font-size: 12px;
+              line-height: 14px;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      .children {
+        list-style: none;
+        margin-top: 30px;
+        padding-top: 30px;
+
+        @include themed() {
+          border-top: 1px solid t($text-color-2);
+        }
+      }
+    }
+  }
+}
+
+.comment-respond {
+  margin-bottom: 30px;
+  padding: 30px;
+  box-shadow: $shadow-1;
+  transition: $tr-lg;
+
+  @include themed() {
+    background: t($card-color);
+  }
+
+  .comment-reply-title {
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 15px;
+
+    small {
+      position: absolute;
+      top: 0px;
+      left: auto;
+      right: 0;
+      display: block;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+}
+
+.ark-comment-layer {
+  z-index: 0;
+  position: relative;
+
+  a {
+    z-index: 1;
+    position: relative;
+  }
+}

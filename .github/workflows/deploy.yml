@@ -19,8 +19,7 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "."
-          target: "/var/www/html/"
-      #        target: "/var/www/html/web/app/themes/arcanjo.dev-wordpress"
+          target: "/var/www/html/web/app/themes/arcanjo.dev/"
 
       - name: Executing remote command
         uses: appleboy/ssh-action@master
@@ -30,8 +29,10 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
           script: |
-            cd /var/www/html/
+            cd /var/www/html/web/app/themes/arcanjo.dev/
 #            composer install
+#            yarn install
+#            yarn build:production
 
 #          cd /var/www/html/web/app/themes
 #          chmod -R 777 arcanjo.dev-wordpress

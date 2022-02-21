@@ -29,9 +29,8 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
           script: |
-#            cd /var/www/html/
-#            chmod -R 777 *
-#            composer install --ignore-platform-reqs
+            cd /var/www/html/
+            composer install
 #            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/
 #            composer install --ignore-platform-reqs
 #            yarn build

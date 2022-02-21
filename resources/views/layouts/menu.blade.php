@@ -29,7 +29,7 @@
                             {{-- menu item --}}
                             <li class="menu-item current-menu-item"><a href="/">Home</a></li>
                             {{-- menu item --}}
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item menu-item-has-children d-none">
                                 <a href="#">Cursos</a>
                                 {{-- sub menu --}}
                                 <ul class="sub-menu">

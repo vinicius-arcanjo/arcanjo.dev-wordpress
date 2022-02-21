@@ -234,7 +234,7 @@
         <div class="ark-price-body">
           <h5 class="mb-30">Projeto Inicial</h5>
           {{-- price cost --}}
-          <div class="ark-price-cost">
+          <div class="ark-price-cost d-none">
             <div class="ark-number">Consultar<sup>*</sup></div>
           </div>
           {{-- price cost end --}}
@@ -275,7 +275,7 @@
           <h5 class="mb-30">Projeto Profissional</h5>
           {{-- price cost --}}
           <div class="ark-price-cost">
-            <div class="ark-number">
+            <div class="ark-number d-none">
              {{--<span>R$</span>--}}
               Consultar<sup>*</sup>
              {{--<span>hora</span>--}}
@@ -319,7 +319,7 @@
           <h5 class="mb-30"> Marketing Starter</h5>
           {{-- price cost --}}
           <div class="ark-price-cost">
-            <div class="ark-number">
+            <div class="ark-number d-none">
               {{--<span>R$</span>--}}
               Consultar<sup>*</sup>
               {{--<span>mês</span>--}}

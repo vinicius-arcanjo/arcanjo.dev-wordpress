@@ -102,7 +102,7 @@
                 <div class="ark-hard-skills-item">
                     <div class="ark-skill-heading">
                         {{-- title --}}
-                        <h6>HTML/CSS3/JS</h6>
+                        <h6>HTML5/CSS3/JS/JQuery</h6>
                     </div>
                     {{-- progressbar frame --}}
                     <div class="ark-line-progress">
@@ -162,7 +162,7 @@
                 <div class="ark-hard-skills-item">
                     <div class="ark-skill-heading">
                         {{-- title --}}
-                        <h6>Dart/Flutter</h6>
+                        <h6>Flutter/React Native</h6>
                     </div>
                     {{-- progressbar frame --}}
                     <div class="ark-line-progress">
@@ -177,7 +177,7 @@
                 <div class="ark-hard-skills-item">
                     <div class="ark-skill-heading">
                         {{-- title --}}
-                        <h6>MySQL/PostgreSQL</h6>
+                        <h6>MySQL/PostgreSQL/MongoDB</h6>
                     </div>
                     {{-- progressbar frame --}}
                     <div class="ark-line-progress">
@@ -199,11 +199,11 @@
                 {{-- list item --}}
                 <li>Sass, Bootstrap, Tailwind</li>
                 {{-- list item --}}
-                <li>Strapi, GraphQL, Rest API</li>
+                <li>Strapi, GraphQL,  API Rest</li>
                 {{-- list item --}}
-                <li>DigitalOcean, Amazon, Azure</li>
+                <li>DigitalOcean, AWS, Heroku</li>
                 {{-- list item --}}
-                <li>Docker, Firebase</li>
+                <li>Docker, Vagrant, Firebase</li>
                 {{-- list item --}}
                 <li>Figma, Adobe XD</li>
                 {{-- list item --}}

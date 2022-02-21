@@ -31,13 +31,13 @@ jobs:
           script: |
             cd /var/www/html/
             composer install
-#            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/
-#            composer install --ignore-platform-reqs
-#            yarn build
-#            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
-#            mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
-#            mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
-#            mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/
+            composer install
+            yarn build
+            cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/resources/assets
+            mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
 #            cd /var/www/html/
 #            find . -type d -exec chmod 755 {} \;
 #            find . -type f -exec chmod 644 {} \;

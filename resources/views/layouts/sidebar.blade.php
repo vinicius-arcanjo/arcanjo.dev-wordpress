@@ -231,13 +231,13 @@
             {{-- social link --}}
             <a href="https://github.com/vinicius-arcanjo" target="_blank"><i class="fab fa-github"></i></a>
             {{-- social link --}}
-            <a href="#embreve target=" _blank"><i class="fab fa-youtube"></i></a>
+            <a href="#embreve" target=_blank"><i class="fab fa-youtube"></i></a>
             {{-- social link --}}
             <a href="#embreve" target="_blank"><i class="fab fa-codepen"></i></a>
             {{-- social link --}}
             <a href="#embreve" target="_blank"><i class="fab fa-linkedin"></i></a>
             {{-- social link --}}
-            <a href="https://steamcommunity.com/profiles/76561198003178506" target="_blank"><i
+            <a href="https://www.linkedin.com/in/viniciusarcanjo/" target="_blank"><i
                     class="fab fa-steam"></i></a>
         </div>
         {{-- sidebar social end --}}

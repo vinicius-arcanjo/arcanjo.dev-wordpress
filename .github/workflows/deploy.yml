@@ -29,6 +29,9 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
           script: |
+            cd /var/www/html/
+            chmod -R 777 *
+            composer install --ignore-platform-reqs
             cd /var/www/html/web/app/themes/arcanjo.dev-wordpress/
             composer install --ignore-platform-reqs
             yarn build
@@ -36,6 +39,8 @@ jobs:
             mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
             mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
             mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            find . -type d -exec chmod 755 {} \;
+            find . -type f -exec chmod 644 {} \;
 #          cd /var/www/html/web/app/themes
 #          chmod -R 777 arcanjo.dev-wordpress
 #          cd /var/www/html/web/app/themes/arcanjo.dev-wordpress

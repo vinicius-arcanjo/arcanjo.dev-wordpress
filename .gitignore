@@ -1,13 +1,17 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/plugins/quform
-!web/app/plugins/wp-mail-smtp-pro
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
+
+# Plugins
+!web/app/plugins/quform
+!web/app/plugins/wp-mail-smtp-pro
+!web/app/plugins/amazon-s3-and-cloudfront-pro
+!web/app/plugins/amazon-s3-and-cloudfront-assets-pull
 
 # WordPress
 web/wp

@@ -106,6 +106,17 @@ Config::define('DISALLOW_FILE_MODS', true);
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?: true);
 
 /**
+ * S3 Settings
+ */
+
+Config::define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'do',
+    'access-key-id' => env('DO_KEY'),
+    'secret-access-key' => env('DO_SECRET')
+) ) );
+
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);

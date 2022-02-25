@@ -97,7 +97,6 @@ Container::getInstance()
 // Hook <strong>lc_custom_post_movie()</strong> to the init action hook
 add_action( 'init', 'arkan_custom_post_project' );
 add_action( 'init', 'arkan_custom_post_courses' );
-add_action( 'init', 'arkan_custom_post_notion_widgets' );
 
 // The custom function to register a movie post type
 function arkan_custom_post_project() {
@@ -174,43 +173,6 @@ function arkan_custom_post_courses() {
   // Parameter 2 is the $args array
   register_post_type( 'curso', $args);
 }
-
-//Notion Widgets
-function arkan_custom_post_notion_widgets() {
-
-  // Set the labels, this variable is used in the $args array
-  $labels = array(
-    'name'               => __( 'Notion' ),
-    'singular_name'      => __( 'Notion' ),
-    'add_new'            => __( 'Add Novo Widget' ),
-    'add_new_item'       => __( 'Add Novo Widget' ),
-    'edit_item'          => __( 'Editar Widget' ),
-    'new_item'           => __( 'Novo Widget' ),
-    'all_items'          => __( 'Todos os Widget' ),
-    'view_item'          => __( 'Ver Widget' ),
-    'search_items'       => __( 'Procurar Widget' ),
-  );
-
-  // The arguments for our post type, to be entered as parameter 2 of register_post_type()
-  $args = array(
-    'labels'            => $labels,
-    'description'       => 'Holds our Widget specific data',
-    'public'            => true,
-    'menu_position'     => 5,
-    'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'page-attributes' ),
-    'has_archive'       => true,
-    'show_in_admin_bar' => true,
-    'show_in_nav_menus' => true,
-    'query_var'         => 'notion',
-    'taxonomies'  => array( 'category', 'post_tag' )
-  );
-
-  // Call the actual WordPress function
-  // Parameter 1 is a name for the post type
-  // Parameter 2 is the $args array
-  register_post_type( 'notion', $args);
-}
-
 
 // Webp
 

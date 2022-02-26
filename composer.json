@@ -68,7 +68,11 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
+      "php -r \"copy('.env.example', '.env');\"",
+      "composer run remove-themes-twenty"
+    ],
+    "remove-themes-twenty": [
+      "rm -rf web/wp/wp-content/themes/twenty*"
     ],
     "test": [
       "phpcs"

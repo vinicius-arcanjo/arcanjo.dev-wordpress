@@ -235,9 +235,9 @@
             {{-- social link --}}
             <a href="#embreve" target="_blank"><i class="fab fa-codepen"></i></a>
             {{-- social link --}}
-            <a href="#embreve" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/viniciusarcanjo" target="_blank"><i class="fab fa-linkedin"></i></a>
             {{-- social link --}}
-            <a href="https://www.linkedin.com/in/viniciusarcanjo/" target="_blank"><i
+            <a href="#embreve" target="_blank"><i
                     class="fab fa-steam"></i></a>
         </div>
         {{-- sidebar social end --}}

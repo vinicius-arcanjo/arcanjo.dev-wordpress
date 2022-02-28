@@ -38,6 +38,10 @@ jobs:
             mv js /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
             mv css /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
             mv fonts /var/www/html/web/app/themes/arcanjo.dev-wordpress/dist
+            cd /var/www/html/web/wp/wp-content/themes
+            rm -rf twenty*
+            cd /var/www/html/web/wp/wp-content/plugins
+            rm -rf hello.php
 #            cd /var/www/html/
 #            find . -type d -exec chmod 755 {} \;
 #            find . -type f -exec chmod 644 {} \;

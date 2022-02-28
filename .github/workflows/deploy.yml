@@ -42,6 +42,8 @@ jobs:
             rm -rf twenty*
             cd /var/www/html/web/wp/wp-content/plugins
             rm -rf hello.php
+            cd /var/www
+            chown www-data:www-data -R html
 #            cd /var/www/html/
 #            find . -type d -exec chmod 755 {} \;
 #            find . -type f -exec chmod 644 {} \;

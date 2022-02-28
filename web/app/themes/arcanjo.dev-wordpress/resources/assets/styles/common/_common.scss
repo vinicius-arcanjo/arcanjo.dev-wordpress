@@ -455,3 +455,8 @@ blockquote {
 .ark-custom-strong {
   font-weight: 700;
 }
+
+
+.quform-edit-form, .quform-element-tree, .quform-default-submit {
+  display: none !important;
+}
